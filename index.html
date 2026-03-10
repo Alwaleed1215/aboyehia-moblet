@@ -6,6 +6,10 @@
     <meta name="description" content="ابو يحي مبلط سيراميك وبورسلان ورخام بالرياض. نقدم أرقى خدمات تركيب السيراميك والبورسلان والرخام بلمسات فنية إبداعية تحول مساحاتك إلى تحف معمارية.">
     <meta name="keywords" content="مبلط, سيراميك, بورسلان, رخام, الرياض, تركيب بلاط, ترميم حمامات, واجهات رخام">
     <title>ابو يحي | مبلط سيراميك وبورسلان ورخام</title>
+    
+    <link rel="icon" href="https://imgg.io/images/2026/03/10/c8eac9f92bcf7526ccb615f753d37e98.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://imgg.io/images/2026/03/10/c8eac9f92bcf7526ccb615f753d37e98.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -26,7 +30,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Tajawal', sans-serif; /* تطبيق الخط على كل الموقع */
+            font-family: 'Tajawal', sans-serif;
             scroll-behavior: smooth;
         }
 
@@ -34,7 +38,7 @@
             background-color: var(--bg-color);
             color: var(--text-light);
             line-height: 1.6;
-            padding-bottom: 80px;
+            padding-bottom: 90px;
         }
 
         body.no-scroll { overflow: hidden; }
@@ -77,32 +81,24 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(10px);
         }
         .header-right { display: flex; align-items: center; gap: 15px; }
-        
         .site-title { color: var(--gold-primary); font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
-        
         .menu-btn { color: var(--gold-primary); font-size: 1.5rem; cursor: pointer; background: none; border: none; transition: 0.3s; }
         .menu-btn:hover { transform: scale(1.1); }
-
-        /* زر تغيير اللغة */
         .lang-btn {
             background: transparent; border: 1px solid var(--gold-primary); color: var(--gold-primary);
-            padding: 3px 8px; border-radius: 5px; cursor: pointer; font-weight: bold;
-            font-size: 0.85rem; transition: 0.3s; font-family: sans-serif;
+            padding: 3px 8px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 0.85rem; transition: 0.3s; font-family: sans-serif;
         }
         .lang-btn:hover { background: var(--gold-primary); color: var(--bg-color); }
 
-        /* القائمة الجانبية (من اليمين) */
+        /* القائمة الجانبية */
         .side-menu {
             position: fixed; top: 60px; width: 250px; height: calc(100vh - 60px);
             background-color: var(--surface-color); transition: 0.4s; z-index: 999; padding-top: 20px;
-            right: -100%; border-left: 1px solid var(--gold-primary); /* في الوضع العربي مخفية يميناً */
+            right: -100%; border-left: 1px solid var(--gold-primary);
         }
         html[lang="ar"] .side-menu.active { right: 0; }
-        
-        /* ضبط القائمة للغة الإنجليزية (من اليسار) */
         html[lang="en"] .side-menu { left: -100%; right: auto; border-right: 1px solid var(--gold-primary); border-left: none; }
         html[lang="en"] .side-menu.active { left: 0; }
-
         .side-menu a {
             display: block; padding: 15px 20px; color: var(--text-light); text-decoration: none;
             font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
@@ -115,21 +111,18 @@
         .section-title { text-align: center; color: var(--gold-primary); font-size: 2.5rem; margin-bottom: 40px; position: relative; }
         .section-title::after { content: ''; display: block; width: 80px; height: 3px; background: var(--gold-primary); margin: 10px auto; border-radius: 2px; }
 
-        /* الرئيسية (Hero) */
+        /* الرئيسية */
         .hero {
-            text-align: center; padding-top: 150px; min-height: 80vh;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 100%);
+            text-align: center; padding-top: 150px; min-height: 80vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 100%);
         }
         .hero h1 {
-            color: var(--gold-primary);
-            font-size: clamp(1.8rem, 4vw, 2.5rem); /* تصغير الخط ليتناسب مع سطرين */
-            max-width: 900px; line-height: 1.4; margin-bottom: 20px;
-            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+            color: var(--gold-primary); font-size: clamp(1.8rem, 4vw, 2.5rem); max-width: 900px;
+            line-height: 1.4; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
         }
         .hero p { max-width: 800px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 30px; }
 
-        /* من نحن الكروت */
+        /* من نحن والخدمات والمزايا */
         .about-text {
             background-color: var(--surface-color); padding: 40px; border-radius: 15px;
             border: 1px solid rgba(212, 175, 55, 0.2); text-align: center; font-size: 1.1rem; line-height: 1.9;
@@ -151,65 +144,79 @@
 
         /* تواصل معنا والخريطة */
         .contact-info { text-align: center; margin-bottom: 40px; }
-        .contact-info p { 
-            font-size: 0.95rem; /* تصغير الخط */
-            margin-bottom: 8px; 
-            white-space: nowrap; /* إجبار النص على سطر واحد */
-        }
+        .contact-info p { font-size: 0.95rem; margin-bottom: 8px; white-space: nowrap; }
         html[lang="ar"] .contact-info i { margin-left: 10px; color: var(--gold-primary); }
         html[lang="en"] .contact-info i { margin-right: 10px; color: var(--gold-primary); }
         
         .map-container { position: relative; border-radius: 15px; overflow: hidden; border: 2px solid var(--gold-primary); height: 400px; }
         .map-container iframe { width: 100%; height: 100%; border: none; }
-        
-        /* الدبوس والنص على الخريطة */
-        .map-overlay-wrapper {
-            position: absolute; bottom: 15px; display: flex; flex-direction: column; align-items: center;
-        }
-        html[lang="ar"] .map-overlay-wrapper { left: 15px; } /* أسفل يسار في العربي */
-        html[lang="en"] .map-overlay-wrapper { right: 15px; } /* أسفل يمين في الإنجليزي */
-
-        .map-pin-icon {
-            color: var(--gold-primary); font-size: 2.2rem; margin-bottom: 5px;
-            animation: bouncePin 1s infinite alternate; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.7));
-        }
+        .map-overlay-wrapper { position: absolute; bottom: 15px; display: flex; flex-direction: column; align-items: center; }
+        html[lang="ar"] .map-overlay-wrapper { left: 15px; }
+        html[lang="en"] .map-overlay-wrapper { right: 15px; }
+        .map-pin-icon { color: var(--gold-primary); font-size: 2.2rem; margin-bottom: 5px; animation: bouncePin 1s infinite alternate; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.7)); }
         @keyframes bouncePin { 0% { transform: translateY(0); } 100% { transform: translateY(-12px); } }
+        .map-overlay { background: rgba(13, 13, 13, 0.9); color: var(--gold-primary); padding: 5px 12px; border-radius: 20px; font-weight: bold; border: 1px solid var(--gold-primary); font-size: 0.75rem; white-space: nowrap; }
 
-        .map-overlay {
-            background: rgba(13, 13, 13, 0.9); color: var(--gold-primary);
-            padding: 5px 12px; border-radius: 20px; font-weight: bold; border: 1px solid var(--gold-primary);
-            font-size: 0.75rem; /* خط أصغر جداً */
-            white-space: nowrap; /* سطر واحد */
-        }
-
-        /* البار السفلي والواتساب */
+        /* ================= البار السفلي ================= */
         .bottom-nav {
-            position: fixed; bottom: 15px; left: 50%; transform: translateX(-50%);
+            position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
             background-color: rgba(26, 26, 26, 0.95); border: 1px solid var(--gold-primary);
-            border-radius: 40px; display: flex; justify-content: space-around; align-items: center;
-            padding: 10px 20px; width: 90%; max-width: 500px; z-index: 1000; backdrop-filter: blur(10px);
+            border-radius: 35px; display: flex; justify-content: space-around; align-items: center;
+            padding: 5px 15px;
+            width: 90%; max-width: 450px; z-index: 1000; backdrop-filter: blur(10px);
         }
-        .bottom-nav a { color: var(--gold-primary); text-decoration: none; font-size: 1.5rem; padding: 8px; border-radius: 50%; transition: 0.3s; }
-        .bottom-nav a:hover { background-color: var(--gold-primary); color: var(--bg-color); transform: translateY(-5px); }
-
-        .whatsapp-float {
-            position: fixed; bottom: 90px; background-color: #25d366; color: white;
-            width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center;
-            font-size: 2rem; z-index: 1000; text-decoration: none; border: 2px solid white; animation: pulse 2s infinite;
+        .bottom-nav a {
+            color: var(--gold-primary); text-decoration: none; font-size: 1.2rem;
+            padding: 5px 10px; border-radius: 12px; transition: 0.3s;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
         }
-        html[lang="ar"] .whatsapp-float { left: 20px; }
-        html[lang="en"] .whatsapp-float { right: 20px; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        .bottom-nav a:hover, .bottom-nav a:active {
+            background-color: var(--gold-primary); color: var(--bg-color); transform: translateY(-3px);
+        }
+        .nav-text {
+            font-size: 0.65rem;
+            font-weight: 700;
+        }
 
-        /* التذييل (Footer) والشارة */
+        /* ================= الأزرار العائمة (واتساب + اتصال) ================= */
+        .floating-action-menu {
+            position: fixed;
+            bottom: 95px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+        }
+        html[lang="ar"] .floating-action-menu { left: 20px; }
+        html[lang="en"] .floating-action-menu { right: 20px; }
+
+        .float-btn {
+            width: 45px; height: 45px; /* تصغير الأزرار لتكون متناسقة أكثر */
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 1.4rem; /* تصغير الأيقونة بداخلها */
+            text-decoration: none; color: white;
+            border: 2px solid white; transition: transform 0.3s;
+        }
+        .float-btn:hover { transform: scale(1.1); }
+        
+        .call-btn {
+            background-color: var(--gold-primary);
+            animation: pulseCall 2s infinite;
+            animation-delay: 1s;
+        }
+        .wa-btn {
+            background-color: #25d366;
+            animation: pulseWA 2s infinite;
+        }
+
+        @keyframes pulseWA { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        @keyframes pulseCall { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+
+        /* التذييل */
         footer { text-align: center; padding: 40px 20px 100px; background-color: #080808; border-top: 1px solid rgba(212, 175, 55, 0.2); }
         .copyright { color: var(--text-muted); font-size: 0.75rem; margin-bottom: 15px; white-space: nowrap; display: flex; justify-content: center; align-items: center; gap: 8px; }
-        
-        .designer-badge, .designer-badge-loader {
-            display: inline-flex; align-items: center; justify-content: center;
-            border: 1.5px solid var(--silver); padding: 5px 15px; border-radius: 30px;
-            text-decoration: none; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); transition: 0.3s; white-space: nowrap;
-        }
+        .designer-badge, .designer-badge-loader { display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid var(--silver); padding: 5px 15px; border-radius: 30px; text-decoration: none; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); transition: 0.3s; white-space: nowrap; }
         .designer-badge span, .designer-badge-loader span { color: var(--silver); font-weight: bold; font-size: 0.75rem; text-shadow: 0 0 5px rgba(192, 192, 192, 0.5); }
         .designer-badge:hover { background: var(--silver); transform: scale(1.05); }
         .designer-badge:hover span { color: #000; text-shadow: none; }
@@ -352,7 +359,7 @@
     <section id="contact">
         <h2 class="section-title"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></h2>
         <div class="contact-info">
-            <p><i class="fas fa-phone"></i> <span class="ar">رقم التواصل: </span><span class="en">Phone: </span><a href="tel:050000000" style="color:var(--text-light); text-decoration:none; direction:ltr; display:inline-block;">050000000</a></p>
+            <p><i class="fas fa-phone"></i> <span class="ar">رقم التواصل: </span><span class="en">Phone: </span><a href="tel:0543195183" style="color:var(--text-light); text-decoration:none; direction:ltr; display:inline-block;">0543195183</a></p>
             <p><i class="fas fa-envelope"></i> <span class="ar">البريد الإلكتروني: </span><span class="en">Email: </span><a href="mailto:admin@aboyehiaalmoblt.com" style="color:var(--text-light); text-decoration:none;">admin@aboyehiaalmoblt.com</a></p>
         </div>
         
@@ -368,15 +375,32 @@
         </div>
     </section>
 
-    <a href="https://wa.me/96650000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <div class="floating-action-menu">
+        <a href="tel:0543195183" class="float-btn call-btn" aria-label="Call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/966543195183" class="float-btn wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <nav class="bottom-nav">
-        <a href="#hero"><i class="fas fa-home"></i></a>
-        <a href="#services"><i class="fas fa-tools"></i></a>
-        <a href="#why-us"><i class="fas fa-star"></i></a>
-        <a href="#contact"><i class="fas fa-phone-alt"></i></a>
+        <a href="#hero">
+            <i class="fas fa-home"></i>
+            <span class="nav-text"><span class="ar">الرئيسية</span><span class="en">Home</span></span>
+        </a>
+        <a href="#services">
+            <i class="fas fa-tools"></i>
+            <span class="nav-text"><span class="ar">خدماتنا</span><span class="en">Services</span></span>
+        </a>
+        <a href="#why-us">
+            <i class="fas fa-star"></i>
+            <span class="nav-text"><span class="ar">لماذا نحن</span><span class="en">Why Us</span></span>
+        </a>
+        <a href="#contact">
+            <i class="fas fa-phone-alt"></i>
+            <span class="nav-text"><span class="ar">تواصل</span><span class="en">Contact</span></span>
+        </a>
     </nav>
 
     <footer>
@@ -416,11 +440,8 @@
         function setLanguage(lang) {
             currentLang = lang;
             document.documentElement.lang = lang;
-            // يتم ضبط اتجاه الصفحة (RTL / LTR) تلقائياً عبر الـ CSS بناءً على الـ lang
             langBtn.innerText = lang === 'ar' ? 'EN' : 'AR';
             localStorage.setItem('siteLang', lang);
-            
-            // إغلاق القائمة الجانبية عند تغيير اللغة إن كانت مفتوحة
             document.getElementById('sideMenu').classList.remove('active');
         }
 
@@ -428,7 +449,6 @@
             setLanguage(currentLang === 'ar' ? 'en' : 'ar');
         });
 
-        // اكتشاف اللغة تلقائياً عند أول زيارة
         document.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('siteLang');
             if (savedLang) {
