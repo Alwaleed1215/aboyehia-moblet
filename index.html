@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ابو يحي مبلط سيراميك وبورسلان ورخام بالرياض. نقدم أرقى خدمات تركيب السيراميك والبورسلان والرخام بلمسات فنية إبداعية تحول مساحاتك إلى تحف معمارية.">
+    <meta name="keywords" content="مبلط, سيراميك, بورسلان, رخام, الرياض, تركيب بلاط, ترميم حمامات, واجهات رخام">
+    <title>ابو يحي | مبلط سيراميك وبورسلان ورخام</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* المتغيرات والألوان */
+        :root {
+            --bg-color: #0d0d0d;
+            --surface-color: #1a1a1a;
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-light: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --silver: #C0C0C0;
+        }
+
+        /* الإعدادات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 80px; /* مساحة للبار السفلي */
+        }
+
+        body.no-scroll {
+            overflow: hidden; /* لمنع التمرير أثناء شاشة التحميل */
+        }
+
+        /* ================= شاشة التحميل (Loader) ================= */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loader-image-frame {
+            border: 2px solid var(--gold-primary);
+            border-radius: 25px;
+            padding: 15px;
+            background: rgba(26, 26, 26, 0.8);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            animation: pulseFrame 1.5s infinite alternate;
+            margin-bottom: 20px;
+        }
+
+        .loader-image-frame img {
+            width: 130px; /* حجم الصورة داخل شاشة التحميل */
+            height: auto;
+            border-radius: 15px;
+            display: block;
+        }
+
+        @keyframes pulseFrame {
+            0% { transform: scale(0.95); box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+            100% { transform: scale(1.05); box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+        }
+
+        .loading-text {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .dots::after {
+            content: '';
+            animation: dotsLoader 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dotsLoader {
+            0%, 20% { content: ''; }
+            40% { content: '.'; }
+            60% { content: '..'; }
+            80%, 100% { content: '...'; }
+        }
+
+        .loader-footer {
+            position: absolute;
+            bottom: 40px;
+        }
+
+        .designer-badge-loader {
+            display: inline-block;
+            border: 1.5px solid var(--silver);
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+        }
+
+        .designer-badge-loader span {
+            color: var(--silver);
+            font-weight: bold;
+            font-size: 0.85rem; /* خط أصغر لشاشة التحميل */
+            text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+        }
+        /* ================= نهاية شاشة التحميل ================= */
+
+        /* الرأس (Header) */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            padding: 15px 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .site-title {
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .menu-btn {
+            color: var(--gold-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+        
+        .menu-btn:hover { transform: scale(1.1); }
+
+        /* القائمة الجانبية (Mobile Menu) */
+        .side-menu {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            width: 250px;
+            height: calc(100vh - 60px);
+            background-color: var(--surface-color);
+            border-right: 1px solid var(--gold-primary);
+            transition: 0.4s;
+            z-index: 999;
+            padding-top: 20px;
+        }
+
+        .side-menu.active { left: 0; }
+
+        .side-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .side-menu a:hover {
+            color: var(--gold-primary);
+            padding-right: 30px;
+        }
+
+        /* الأقسام العامة */
+        section {
+            padding: 100px 5% 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold-primary);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--gold-primary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* الرئيسية (Hero) */
+        .hero {
+            text-align: center;
+            padding-top: 150px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 100%);
+        }
+
+        .hero h1 {
+            color: var(--gold-primary);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        .hero p {
+            max-width: 800px;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        /* من نحن */
+        .about-text {
+            background-color: var(--surface-color);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* الخدمات والمزايا (Grid) */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* كروت الخدمات */
+        .service-card {
+            background-color: var(--surface-color);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15);
+            border-color: var(--gold-primary);
+        }
+
+        .service-card:active {
+            transform: scale(0.96);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: var(--gold-light);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* كروت المزايا */
+        .feature-card {
+            text-align: center;
+            padding: 20px;
+        }
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+            background: rgba(212, 175, 55, 0.1);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+        }
+        .feature-card h3 { margin-bottom: 10px; color: var(--text-light); }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* تواصل معنا */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+        .contact-info p { margin-bottom: 10px; }
+        .contact-info i { color: var(--gold-primary); margin-left: 10px; }
+        
+        .map-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--gold-primary);
+            height: 400px;
+        }
+        .map-container iframe { width: 100%; height: 100%; border: none; }
+        .map-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(13, 13, 13, 0.9);
+            color: var(--gold-primary);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            border: 1px solid var(--gold-primary);
+        }
+
+        /* البار السفلي للتنقل */
+        .bottom-nav {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(26, 26, 26, 0.95);
+            border: 1px solid var(--gold-primary);
+            border-radius: 40px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 20px;
+            width: 90%;
+            max-width: 500px;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        }
+
+        .bottom-nav a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            font-size: 1.5rem;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom-nav a:hover, .bottom-nav a:active {
+            background-color: var(--gold-primary);
+            color: var(--bg-color);
+            transform: translateY(-5px);
+        }
+
+        /* واتساب العائم */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            background-color: #25d366;
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            z-index: 1000;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            animation: pulse 2s infinite;
+            border: 2px solid white;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* التذييل (Footer) */
+        footer {
+            text-align: center;
+            padding: 40px 20px 100px;
+            background-color: #080808;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* تصميم شارة المهندس */
+        .designer-badge {
+            display: inline-block;
+            border: 2px solid var(--silver);
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .designer-badge span {
+            color: var(--silver);
+            font-weight: bold;
+            font-size: 1rem;
+            text-shadow: 0 0 5px rgba(192, 192, 192, 0.5);
+        }
+
+        .designer-badge:hover {
+            background: var(--silver);
+            box-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+            transform: scale(1.05);
+        }
+
+        .designer-badge:hover span { color: #000; }
+    </style>
+</head>
+<body class="no-scroll"> <div id="loader">
+        <div class="loader-content">
+            <div class="loader-image-frame">
+                <img src="https://imgg.io/images/2026/03/10/c8eac9f92bcf7526ccb615f753d37e98.png" alt="جاري التحميل">
+            </div>
+            <p class="loading-text">جاري تحميل الموقع<span class="dots"></span></p>
+        </div>
+        <div class="loader-footer">
+            <div class="designer-badge-loader">
+                <span>👑 تم التصميم بواسطة المهندس إسلام الشيخ 👑</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="القائمة">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="site-title">ابو يحي مبلط سيراميك وبورسلان ورخام</div>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        <a href="#hero" onclick="toggleMenu()">الرئيسية</a>
+        <a href="#about" onclick="toggleMenu()">من نحن</a>
+        <a href="#services" onclick="toggleMenu()">خدماتنا</a>
+        <a href="#why-us" onclick="toggleMenu()">لماذا نحن</a>
+        <a href="#contact" onclick="toggleMenu()">تواصل معنا</a>
+    </div>
+
+    <section id="hero" class="hero">
+        <h1>ابو يحي مبلط سيراميك وبورسلان ورخام</h1>
+        <p>هل تبحث عن لمسة من الفخامة والجمال لمنزلك؟ نقدم لك في مؤسسة أبو يحيى أرقى خدمات تركيب السيراميك والبورسلان والرخام بلمسات فنية إبداعية تحول مساحاتك إلى تحف معمارية. نتميز بالدقة المتناهية والاحترافية العالية في تنفيذ كافة أعمال التبليط الداخلي والخارجي، وتركيب واجهات الرخام الفخمة، وترميم الحمامات بأحدث الطرق. نعتمد على أفضل المواد والتقنيات لضمان جودة تدوم طويلاً، مع تقديم أسعار تنافسية. اجعل منزلك يعكس ذوقك الرفيع مع خدماتنا المتكاملة، تواصل معنا اليوم لتحقيق رؤيتك الفخمة.</p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">من نحن</h2>
+        <div class="about-text">
+            <strong>أبو يحيى مبلط سيراميك وبورسلان ورخام بالرياض،</strong> خبيرك الأول في عالم التشطيبات الراقية. نمتلك سنوات من الخبرة الواسعة في تقديم حلول تبليط متكاملة تلبي كافة تطلعات عملائنا الكرام. نجمع بين المهارة الحرفية العالية والفهم العميق لأحدث اتجاهات التصميم الداخلي والخارجي، لنقدم لك نتائج مبهرة تتجاوز توقعاتك بجودة لا تضاهى. نلتزم بأعلى معايير الأمانة والدقة لنضمن لك مساحات تنبض بالفخامة.
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">خدماتنا</h2>
+        <div class="grid-container">
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-border-all"></i>
+                <h3>تركيب بلاط</h3>
+                <p>نقدم خدمات تركيب البلاط بأنواعه المختلفة للمساحات السكنية والتجارية. نضمن لك استواءً تاماً وفواصل دقيقة بفضل استخدام أحدث معدات القياس بالليزر. نساعدك في اختيار التصاميم التي تبرز جمال المكان، مع التزامنا التام بتسليم العمل في الوقت المحدد وبجودة استثنائية تدوم لسنوات طويلة دون تأثر بالعوامل.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-th-large"></i>
+                <h3>تركيب بورسلان</h3>
+                <p>البورسلان يعكس الفخامة المطلقة، ونحن نمتلك الحرفية اللازمة للتعامل مع ألواح البورسلان الكبيرة (Large Format) والصغيرة باحترافية. نستخدم غراء ومواد تثبيت مستوردة تضمن عدم تطبيل الأرضيات مستقبلاً. نحول صالاتك ومجالسك إلى لوحات فنية متصلة تعكس رقي ذوقك بأسعار مدروسة وتنافسية جداً.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-building"></i>
+                <h3>تركيب واجهات رخام</h3>
+                <p>اجعل انطباع منزلك الأول لا يُنسى مع واجهات الرخام الفخمة. نقوم بتركيب الرخام للواجهات الخارجية بالطرق الميكانيكية الحديثة التي تضمن الأمان التام والعزل الحراري الممتاز. ننتقي أفضل قطع الرخام المتناسقة العروق لتعطي واجهة قصرك أو فلتك هيبة وجمالاً يسرق الأنظار ويقاوم تقلبات الطقس بقوة.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-bath"></i>
+                <h3>ترميم حمامات</h3>
+                <p>نجدد حمامك بالكامل ليصبح واحة من الاسترخاء والجمال. تشمل خدماتنا إزالة البلاط القديم، معالجة التسربات المائية بأفضل العوازل، وتأسيس السباكة من جديد، ثم تركيب أحدث تشكيلات السيراميك والبورسلان لتناسب الموضة العصرية. نحول مساحتك القديمة إلى تصميم مودرن بأقل فوضى وفي وقت قياسي.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-home"></i>
+                <h3>تركيب بلاط أسطح</h3>
+                <p>نولي اهتماماً كبيراً لتبليط الأسطح لحماية منزلك من تسربات مياه الأمطار والحرارة. نطبق أنظمة العزل المائي والحراري قبل البدء بتركيب بلاط الأسطح المعالج (الموزايكو أو السيراميك المطفي)، مع ضبط الميول الهندسية الدقيقة نحو مصارف المياه لضمان عدم تجمع المياه نهائياً، لحماية سقف منزلك بفعالية.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-leaf"></i>
+                <h3>تركيب بلاط الأحواش</h3>
+                <p>نصمم وننفذ أرضيات الأحواش والممرات الخارجية ومداخل السيارات باستخدام أقوى أنواع البلاط الانترلوك أو البورسلان الخارجي الخشن المقاوم للانزلاق والضغط العالي. نضفي لمسات جمالية على حديقتك وحوشك لتكون مساحة مثالية لاستقبال الضيوف وقضاء أمتع الأوقات العائلية في الهواء الطلق.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-chess-board"></i>
+                <h3>تركيب بلاط وسيراميك داخلي</h3>
+                <p>الجمال يبدأ من الداخل، ولذلك نقدم خدمة التبليط الداخلي للغرف والمطابخ بأعلى درجات الدقة. نركب الديكورات الجدارية والأحزمة (الوزر) بطريقة احترافية تجعل الجدران والأرضيات تتناغم بشكل مثالي. حلولنا تناسب كافة الأذواق سواء الكلاسيكية أو المودرن لنمنح منزلك الروح والدفء الذي يستحقه.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-gem"></i>
+                <h3>تركيب رخام</h3>
+                <p>نتعامل مع الرخام الطبيعي كقطعة فنية ثمينة. نقوم بقص وتركيب وتلميع الرخام للأرضيات، الأدراج، والمغاسل. نضمن لك تطابق عروق الرخام (Bookmatch) لإخراج تحفة بصرية لا مثيل لها. نستخدم أفضل آلات الجلي والتلميع الإيطالية ليعود رخامك لامعاً كالمرآة، مضيفاً قيمة ورونقاً ملكياً لمنزلك.</p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-city"></i>
+                <h3>تركيب سيراميك للمنازل والفلل</h3>
+                <p>نتولى المشاريع الكبيرة للفلل والمنازل الجديدة بالكامل من الألف إلى الياء. نوفر فريق عمل ضخم لإنجاز العمل بسرعة دون المساس بالجودة العالية. إشراف هندسي دقيق على كل خطوة لضمان تسليم مفتاح يرضي طموحك. نعتبر كل فيلا نعمل بها مشروعاً شخصياً نسعى لإبراز مهاراتنا فيه بأفضل صورة ممكنة.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" style="background-color: #111;">
+        <h2 class="section-title">لماذا تختار ابو يحي ؟</h2>
+        <div class="grid-container">
+            <div class="feature-card">
+                <i class="fas fa-medal"></i>
+                <h3>دقة في العمل وجودة في التنفيذ</h3>
+                <p>لا مجال للخطأ في عملنا. نعتمد على أدوات قياس ليزرية متطورة وخبرة تمتد لسنوات، لنضمن لك خطوطاً مستقيمة، وميولاً مضبوطة، وتشطيبات خالية من العيوب، مما يمنح منزلك المظهر الاحترافي الراقي الذي تحلم به وتستحقه.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>التزام بمواعيد التسليم</h3>
+                <p>نقدر وقتك الثمين وندرك أهمية الالتزام بالجدول الزمني للمشروع. نضع خطة عمل واضحة ونلتزم بتسليم الموقع في الوقت المتفق عليه تماماً دون أي تأخير، لتتمكن من الانتقال لمنزلك أو إكمال باقي التشطيبات براحة بال تامة.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tags"></i>
+                <h3>اسعار تنافسية تناسب الميزانيات</h3>
+                <p>الفخامة لا تعني دائماً التكلفة الباهظة. نحن نقدم لك معادلة ذهبية تجمع بين أعلى معايير الجودة في المواد والمصنعية، وبين الأسعار المدروسة التي تناسب ميزانيتك، مع تقديم عروض خاصة للمساحات الكبيرة والفلل الكاملة.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>ضمان ما بعد التنفيذ</h3>
+                <p>ثقتنا في جودة عملنا تجعلنا نقدم لك ضماناً حقيقياً على كافة أعمال التركيب والصيانة. نحن متواجدون دائماً لخدمتك حتى بعد انتهاء العمل وتسليم الموقع، لنضمن لك راحة البال واستدامة جمال منزلك لسنوات طويلة جداً.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">تواصل معنا</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> رقم التواصل: <a href="tel:050000000" style="color:var(--text-light); text-decoration:none; direction:ltr; display:inline-block;">050000000</a></p>
+            <p><i class="fas fa-envelope"></i> البريد الإلكتروني: <a href="mailto:admin@aboyehiaalmoblt.com" style="color:var(--text-light); text-decoration:none;">admin@aboyehiaalmoblt.com</a></p>
+        </div>
+        
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Riyadh&t=p&z=11&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            <div class="map-overlay">نقدم خدماتنا في جميع أنحاء الرياض</div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/96650000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر الواتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="bottom-nav">
+        <a href="#hero" aria-label="الرئيسية"><i class="fas fa-home"></i></a>
+        <a href="#services" aria-label="خدماتنا"><i class="fas fa-tools"></i></a>
+        <a href="#why-us" aria-label="لماذا نحن"><i class="fas fa-star"></i></a>
+        <a href="#contact" aria-label="تواصل معنا"><i class="fas fa-phone-alt"></i></a>
+    </nav>
+
+    <footer>
+        <div class="copyright">
+            <i class="fas fa-copyright"></i>
+            <span>جميع الحقوق محفوظة لدى : ابو يحي مبلط سيراميك وبورسلان ورخام 2027</span>
+        </div>
+        
+        <a href="https://wa.me/966547194788" target="_blank" class="designer-badge" rel="noopener noreferrer">
+            <span>👑 تم التصميم بواسطة المهندس إسلام الشيخ 👑</span>
+        </a>
+    </footer>
+
+    <script>
+        // إعدادات شاشة التحميل (Loader)
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.classList.add('hidden');
+                document.body.classList.remove('no-scroll'); // إعادة تفعيل التمرير
+                
+                // إزالة عنصر التحميل من الصفحة لتخفيف الذاكرة بعد اختفائه
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }, 2000); // 2000 ملي ثانية = ثانيتين
+        });
+
+        // القائمة الجانبية
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
