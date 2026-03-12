@@ -6,7 +6,7 @@
     <meta name="description" content="ابو يحي مبلط سيراميك وبورسلان ورخام بالرياض. نقدم أرقى خدمات تركيب السيراميك والبورسلان والرخام بلمسات فنية إبداعية تحول مساحاتك إلى تحف معمارية.">
     <meta name="keywords" content="مبلط, سيراميك, بورسلان, رخام, الرياض, تركيب بلاط, ترميم حمامات, واجهات رخام">
     
-    <meta name="google-site-verification" content="MwiJDhnpV5nhNaletUm3h81AmbcMi0lbAXhVRvN-E9k" />
+    <meta name="google-site-verification" content="MwiJDhnpV5nhNaletUm3h81AmbcMi0IbAXhVRvN-E9k" />
 
     <meta property="og:title" content="ابو يحي | مبلط سيراميك وبورسلان ورخام">
     <meta property="og:description" content="أرقى خدمات تركيب السيراميك والبورسلان والرخام بلمسات فنية إبداعية في الرياض.">
@@ -62,7 +62,7 @@
         html[lang="en"] { direction: ltr; }
         /* ======================================================= */
 
-        /* شاشة التحميل (Loader) باللوجو الجديد */
+        /* شاشة التحميل (Loader) الدائرية الفخمة */
         #loader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-color: var(--bg-color); z-index: 99999;
@@ -72,20 +72,36 @@
         #loader.hidden { opacity: 0; visibility: hidden; }
         .loader-content { text-align: center; display: flex; flex-direction: column; align-items: center; }
         
+        /* الإطار الدائري الذهبي المضيء */
         .loader-image-frame {
-            border: 2px solid var(--gold-primary); border-radius: 25px; padding: 15px;
-            background: rgba(26, 26, 26, 0.8); box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
-            animation: pulseFrame 1.5s infinite alternate; margin-bottom: 20px;
+            width: 160px; height: 160px; border-radius: 50%;
+            background: var(--surface-color);
+            border: 4px solid transparent;
+            border-top-color: var(--gold-primary);
+            border-bottom-color: var(--gold-primary);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(212, 175, 55, 0.1);
             display: flex; justify-content: center; align-items: center;
-        }
-        .loader-image-frame img { 
-            width: 100px; height: auto; object-fit: contain; 
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.5));
+            margin-bottom: 25px; position: relative;
+            animation: spinGlow 2s linear infinite;
         }
         
-        @keyframes pulseFrame {
-            0% { transform: scale(0.95); box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
-            100% { transform: scale(1.05); box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+        /* تثبيت اللوجو وحركته لكي لا يدور مع الإطار */
+        .loader-image-frame img { 
+            width: 110px; height: auto; object-fit: contain; 
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+            animation: counterSpinPulse 2s linear infinite;
+        }
+
+        @keyframes spinGlow {
+            0% { transform: rotate(0deg); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+            100% { transform: rotate(360deg); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        }
+        
+        @keyframes counterSpinPulse {
+            0% { transform: rotate(0deg) scale(0.95); }
+            50% { transform: rotate(-180deg) scale(1.05); }
+            100% { transform: rotate(-360deg) scale(0.95); }
         }
         
         .loading-text { color: var(--gold-light); font-size: 1.1rem; font-weight: 500; margin-top: 10px; }
