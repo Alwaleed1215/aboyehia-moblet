@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="فني سيراميك أبو يحيى في حي المصيف وشمال الرياض. مقاول تركيب سيراميك، بورسلان، ورخام. خدمة ميدانية نصلك أينما كنت لتنفيذ أرقى التشطيبات.">
-    <meta name="keywords" content="مبلط, فني سيراميك, بورسلان, رخام, حي المصيف, الرياض, شمال الرياض, مقاول تركيب بلاط, خدمة ميدانية">
-    <meta name="author" content="فني سيراميك أبو يحيى">
+    <meta name="description" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام في حي المصيف وشمال الرياض. مقاول تركيب سيراميك، بورسلان، ورخام. خدمة ميدانية نصلك أينما كنت لتنفيذ أرقى التشطيبات.">
+    <meta name="keywords" content="مبلط, إبراهيم يحيى فني سيراميك, بورسلان, رخام, حي المصيف, الرياض, شمال الرياض, مقاول تركيب بلاط, خدمة ميدانية">
+    <meta name="author" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام">
     <meta name="geo.region" content="SA-01">
     <meta name="geo.placename" content="Riyadh, Al Masif">
     
     <meta name="google-site-verification" content="MwiJDhnpV5nhNaletUm3h81AmbcMi0IbAXhVRvN-E9k" />
 
-    <meta property="og:title" content="فني سيراميك أبو يحيى | حي المصيف والرياض">
+    <meta property="og:title" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام | حي المصيف والرياض">
     <meta property="og:description" content="أفضل فني تركيب سيراميك وبورسلان ورخام في حي المصيف وشمال الرياض. خدمة ميدانية نصلك في موقعك.">
     <meta property="og:image" content="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png">
     <meta property="og:type" content="business.business">
@@ -20,7 +20,7 @@
     <meta property="business:contact_data:locality" content="حي المصيف، الرياض">
     <meta property="business:contact_data:country_name" content="المملكة العربية السعودية">
 
-    <title>فني سيراميك أبو يحيى | مبلط بحي المصيف</title>
+    <title>إبراهيم يحيى فني سيراميك وبورسلان ورخام | مبلط بحي المصيف</title>
     
     <link rel="icon" href="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png" type="image/png">
     <link rel="apple-touch-icon" href="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png">
@@ -32,7 +32,7 @@
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "name": "فني سيراميك أبو يحيى",
+      "name": "إبراهيم يحيى فني سيراميك وبورسلان ورخام",
       "image": "https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png",
       "@id": "",
       "url": "https://aboyehiaalmoblt.com",
@@ -220,101 +220,25 @@
         .feature-card h3 { margin-bottom: 10px; color: var(--text-light); }
         .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
 
-        /* تواصل معنا والخريطة الميدانية */
+        /* تواصل معنا والخريطة المضمنة من جوجل */
         .contact-info { text-align: center; margin-bottom: 40px; padding: 0 10px; }
         .contact-info p { font-size: 0.95rem; margin-bottom: 10px; word-wrap: break-word; }
         html[lang="ar"] .contact-info i { margin-left: 10px; color: var(--gold-primary); }
         html[lang="en"] .contact-info i { margin-right: 10px; color: var(--gold-primary); }
         
-        /* CSS الخريطة الميدانية الجديد المتطابق مع الصورة */
-        .service-area-map {
-            background-color: #111;
-            border: 2px solid var(--gold-primary);
-            border-radius: 15px;
-            padding: 40px 20px;
+        .map-container { position: relative; width: 100%; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 15px; border: 2px solid var(--gold-primary); }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        
+        /* رسالة الخدمة الميدانية فوق الخريطة */
+        .service-area-message {
+            background: rgba(13, 13, 13, 0.85);
+            color: var(--gold-primary);
+            padding: 10px;
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .service-area-map i.fa-tools {
-            font-size: 3rem;
-            color: var(--gold-primary);
-            margin-bottom: 20px;
-        }
-
-        .service-area-map h3 {
-            color: var(--text-light);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .service-area-map p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        .map-pin-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .map-pin-container i.fa-map-marker-alt {
-            font-size: 3rem;
-            color: var(--gold-primary);
-            animation: bouncePin 1.5s infinite alternate;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.8));
-            position: relative;
-            z-index: 2;
-        }
-
-        .map-pin-shadow {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 50%;
-            filter: blur(2px);
-            animation: shadowScale 1.5s infinite alternate;
-            z-index: 1;
-        }
-
-        @keyframes bouncePin {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-15px); }
-        }
-
-        @keyframes shadowScale {
-            0% { transform: translateX(-50%) scale(1); opacity: 0.5; }
-            100% { transform: translateX(-50%) scale(0.6); opacity: 0.2; }
-        }
-
-        .reach-you-badge {
-            display: inline-block;
-            background-color: transparent;
-            color: var(--gold-primary);
-            border: 1px solid var(--gold-primary);
-            padding: 8px 20px;
-            border-radius: 25px;
             font-weight: bold;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
-
-        .district-title {
-            color: var(--gold-primary);
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gold-primary);
         }
 
         /* ================= البار السفلي ================= */
@@ -384,10 +308,6 @@
             .floating-action-menu { bottom: 85px; }
             .float-btn { width: 40px; height: 40px; font-size: 1.2rem; }
             header .site-title { font-size: 0.95rem; }
-            
-            .service-area-map { padding: 30px 15px; }
-            .service-area-map h3 { font-size: 1.3rem; }
-            .service-area-map p { font-size: 1rem; }
         }
     </style>
 </head>
@@ -414,8 +334,8 @@
         <div class="header-right">
             <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
             <div class="site-title">
-                <span class="ar">فني سيراميك أبو يحيى</span>
-                <span class="en">Abu Yahya Tiling Tech</span>
+                <span class="ar">إبراهيم يحيى فني سيراميك</span>
+                <span class="en">Ibrahim Yahya Tiling</span>
             </div>
         </div>
         <button id="langToggleBtn" class="lang-btn">EN</button>
@@ -431,8 +351,8 @@
 
     <section id="hero" class="hero">
         <h1>
-            <span class="ar">فني سيراميك أبو يحيى لتركيب البلاط والرخام بالرياض</span>
-            <span class="en">Abu Yahya Ceramic & Marble Tech in Riyadh</span>
+            <span class="ar">إبراهيم يحيى فني سيراميك وبورسلان ورخام بالرياض</span>
+            <span class="en">Ibrahim Yahya Ceramic & Marble Tech in Riyadh</span>
         </h1>
         <p>
             <span class="ar">نقدم خدمات تركيب السيراميك والبورسلان والرخام بأعلى معايير الجودة. نحن "خدمة ميدانية" مقرنا حي المصيف ونصل إليك في جميع أحياء شمال الرياض لتقديم تشطيبات فخمة وأسعار تنافسية. تواصل معنا الآن.</span>
@@ -443,8 +363,8 @@
     <section id="about">
         <h2 class="section-title"><span class="ar">من نحن</span><span class="en">About Us</span></h2>
         <div class="about-text">
-            <span class="ar"><strong>فني سيراميك أبو يحيى،</strong> خبيرك الأول في عالم التشطيبات الراقية بحي المصيف والرياض. نمتلك سنوات من الخبرة الواسعة في تقديم حلول تبليط متكاملة تلبي كافة تطلعات عملائنا الكرام. نجمع بين المهارة الحرفية العالية والفهم العميق لأحدث اتجاهات التصميم، لنقدم لك نتائج مبهرة تتجاوز توقعاتك بجودة لا تضاهى كخدمة ميدانية احترافية.</span>
-            <span class="en"><strong>Abu Yahya Ceramic Tech,</strong> your top expert in Al Masif and Riyadh. We have years of experience providing comprehensive tiling solutions. We combine high craftsmanship with deep understanding of design trends to deliver stunning results as a professional field service.</span>
+            <span class="ar"><strong>إبراهيم يحيى فني سيراميك وبورسلان ورخام،</strong> خبيرك الأول في عالم التشطيبات الراقية بحي المصيف والرياض. نمتلك سنوات من الخبرة الواسعة في تقديم حلول تبليط متكاملة تلبي كافة تطلعات عملائنا الكرام. نجمع بين المهارة الحرفية العالية والفهم العميق لأحدث اتجاهات التصميم، لنقدم لك نتائج مبهرة تتجاوز توقعاتك بجودة لا تضاهى كخدمة ميدانية احترافية.</span>
+            <span class="en"><strong>Ibrahim Yahya Ceramic Tech,</strong> your top expert in Al Masif and Riyadh. We have years of experience providing comprehensive tiling solutions. We combine high craftsmanship with deep understanding of design trends to deliver stunning results as a professional field service.</span>
         </div>
     </section>
 
@@ -485,7 +405,7 @@
     </section>
 
     <section id="why-us" style="background-color: #111;">
-        <h2 class="section-title"><span class="ar">لماذا تختار فني سيراميك أبو يحيى؟</span><span class="en">Why Choose Abu Yahya Tech?</span></h2>
+        <h2 class="section-title"><span class="ar">لماذا تختار إبراهيم يحيى؟</span><span class="en">Why Choose Ibrahim Yahya?</span></h2>
         <div class="grid-container">
             <div class="feature-card">
                 <i class="fas fa-medal"></i>
@@ -507,36 +427,20 @@
 
     <section id="contact">
         <h2 class="section-title"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> <span class="ar">رقم الجوال: </span><span class="en">Phone: </span><a href="tel:0543195183" style="color:var(--text-light); text-decoration:none; direction:ltr; display:inline-block;">0543195183</a></p>
+            <p><i class="fas fa-envelope"></i> <span class="ar">البريد الإلكتروني: </span><span class="en">Email: </span><a href="mailto:admin@aboyehiaalmoblt.com" style="color:var(--text-light); text-decoration:none;">admin@aboyehiaalmoblt.com</a></p>
+        </div>
         
-        <div class="district-title">
-            <span class="ar">وكافة الأحياء</span>
-            <span class="en">And All Districts</span>
+        <div class="service-area-message">
+            <i class="fas fa-truck" style="margin-left: 5px;"></i>
+            <span class="ar">خدمة ميدانية تغطي حي المصيف وكافة أنحاء شمال الرياض</span>
+            <span class="en">Field service covering Al Masif and North Riyadh</span>
         </div>
 
-        <div class="service-area-map">
-            <i class="fas fa-tools"></i>
-            <h3>
-                <span class="ar">فني سيراميك أبو يحيى | خدمة ميدانية</span>
-                <span class="en">Abu Yahya Tech | Field Service</span>
-            </h3>
-            <p>
-                <span class="ar">نحن نقدم <strong>خدماتنا ميدانياً</strong> وننتقل بمعداتنا وفريق العمل إلى موقعك لتنفيذ كافة أعمال التبليط والرخام.<br><br>مقر انطلاقنا من <strong>حي المصيف</strong>، ونغطي جميع مناطق الرياض.</span>
-                <span class="en">We provide <strong>field services</strong>, bringing our team and equipment to your site for all tiling works. <br><br>Based in <strong>Al Masif</strong>, serving all of Riyadh.</span>
-            </p>
-            
-            <div class="map-pin-container">
-                <i class="fas fa-map-marker-alt"></i>
-                <div class="map-pin-shadow"></div>
-            </div>
-            
-            <div style="margin-top: 15px;">
-                <span class="reach-you-badge">
-                    <span class="ar">نصل إليك أينما كنت</span>
-                    <span class="en">We Reach You Anywhere</span>
-                </span>
-            </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28976.22384737227!2d46.6806087536968!3d24.743110292026857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee2a14e9f5569%3A0xc07a82fb8f3d6117!2z2K3ZiiDYp9mE2YXYtdmK2YHYjCDYp9mE2LHZitin2LYgMTI0NjM!5e0!3m2!1sar!2ssa!4v1700000000000!5m2!1sar!2ssa" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
     </section>
 
     <div class="floating-action-menu">
@@ -570,8 +474,8 @@
     <footer>
         <div class="copyright">
             <i class="fas fa-copyright"></i>
-            <span class="ar">جميع الحقوق محفوظة لدى : فني سيراميك أبو يحيى 2026</span>
-            <span class="en">All rights reserved to Abu Yahya Ceramic Tech 2026</span>
+            <span class="ar">جميع الحقوق محفوظة لدى : إبراهيم يحيى فني سيراميك وبورسلان ورخام 2026</span>
+            <span class="en">All rights reserved to Ibrahim Yahya Ceramic Tech 2026</span>
         </div>
         
         <a href="https://wa.me/966547194788" target="_blank" class="designer-badge" rel="noopener noreferrer">
