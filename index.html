@@ -1,1 +1,532 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام في حي المصيف وشمال الرياض. مقاول تركيب سيراميك، بورسلان، ورخام. خدمة ميدانية نصلك أينما كنت لتنفيذ أرقى التشطيبات.">
+    <meta name="keywords" content="مبلط, إبراهيم يحيى فني سيراميك, بورسلان, رخام, حي المصيف, الرياض, شمال الرياض, مقاول تركيب بلاط, خدمة ميدانية">
+    <meta name="author" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام">
+    <meta name="geo.region" content="SA-01">
+    <meta name="geo.placename" content="Riyadh, Al Masif">
+    
+    <meta name="google-site-verification" content="MwiJDhnpV5nhNaletUm3h81AmbcMi0IbAXhVRvN-E9k" />
 
+    <meta property="og:title" content="إبراهيم يحيى فني سيراميك وبورسلان ورخام | حي المصيف والرياض">
+    <meta property="og:description" content="أفضل فني تركيب سيراميك وبورسلان ورخام في حي المصيف وشمال الرياض. خدمة ميدانية نصلك في موقعك.">
+    <meta property="og:image" content="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png">
+    <meta property="og:type" content="business.business">
+    <meta property="business:contact_data:phone_number" content="0576889063">
+    <meta property="business:contact_data:locality" content="حي المصيف، الرياض">
+    <meta property="business:contact_data:country_name" content="المملكة العربية السعودية">
+
+    <title>إبراهيم يحيى فني سيراميك وبورسلان ورخام | مبلط بحي المصيف</title>
+    
+    <link rel="icon" href="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png" type="image/png">
+    <link rel="apple-touch-icon" href="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "إبراهيم يحيى فني سيراميك وبورسلان ورخام",
+      "image": "https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png",
+      "@id": "",
+      "url": "https://aboyehiaalmoblt.com",
+      "telephone": "0576889063",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "حي المصيف، الرياض",
+        "addressRegion": "منطقة الرياض",
+        "addressCountry": "SA"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "الرياض"
+        },
+        {
+          "@type": "Neighborhood",
+          "name": "حي المصيف"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "07:00",
+        "closes": "23:00"
+      }
+    }
+    </script>
+    
+    <style>
+        /* المتغيرات والألوان */
+        :root {
+            --bg-color: #0d0d0d;
+            --surface-color: #1a1a1a;
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --text-light: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --silver: #C0C0C0;
+        }
+
+        /* الإعدادات العامة والخطوط */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        body.no-scroll { overflow: hidden; }
+
+        /* ================= نظام اللغتين (CSS) ================= */
+        html[lang="ar"] .en { display: none; }
+        html[lang="en"] .ar { display: none; }
+        html[lang="en"] { direction: ltr; }
+        /* ======================================================= */
+
+        /* شاشة التحميل (Loader) الدائرية الفخمة */
+        #loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: var(--bg-color); z-index: 99999;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        #loader.hidden { opacity: 0; visibility: hidden; }
+        .loader-content { text-align: center; display: flex; flex-direction: column; align-items: center; }
+        
+        .loader-image-frame {
+            width: 160px; height: 160px; border-radius: 50%;
+            background: var(--surface-color);
+            border: 4px solid transparent;
+            border-top-color: var(--gold-primary);
+            border-bottom-color: var(--gold-primary);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(212, 175, 55, 0.1);
+            display: flex; justify-content: center; align-items: center;
+            margin-bottom: 25px; position: relative;
+            animation: spinGlow 2s linear infinite;
+        }
+        
+        .loader-image-frame img { 
+            width: 110px; height: auto; object-fit: contain; 
+            filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+            animation: counterSpinPulse 2s linear infinite;
+        }
+
+        @keyframes spinGlow {
+            0% { transform: rotate(0deg); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+            100% { transform: rotate(360deg); box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        }
+        
+        @keyframes counterSpinPulse {
+            0% { transform: rotate(0deg) scale(0.95); }
+            50% { transform: rotate(-180deg) scale(1.05); }
+            100% { transform: rotate(-360deg) scale(0.95); }
+        }
+        
+        .loading-text { color: var(--gold-light); font-size: 1.1rem; font-weight: 500; margin-top: 10px; }
+        .dots::after { content: ''; animation: dotsLoader 1.5s steps(4, end) infinite; }
+        @keyframes dotsLoader { 0%, 20% { content: ''; } 40% { content: '.'; } 60% { content: '..'; } 80%, 100% { content: '...'; } }
+        .loader-footer { position: absolute; bottom: 40px; width: 100%; text-align: center; }
+
+        /* الرأس (Header) */
+        header {
+            background-color: rgba(26, 26, 26, 0.95); padding: 15px 5%;
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3); backdrop-filter: blur(10px);
+        }
+        .header-right { display: flex; align-items: center; gap: 15px; }
+        .site-title { color: var(--gold-primary); font-size: 1.1rem; font-weight: 700; white-space: nowrap; }
+        .menu-btn { color: var(--gold-primary); font-size: 1.5rem; cursor: pointer; background: none; border: none; transition: 0.3s; }
+        .menu-btn:hover { transform: scale(1.1); }
+        .lang-btn {
+            background: transparent; border: 1px solid var(--gold-primary); color: var(--gold-primary);
+            padding: 3px 8px; border-radius: 5px; cursor: pointer; font-weight: bold; font-size: 0.85rem; transition: 0.3s; font-family: sans-serif;
+        }
+        .lang-btn:hover { background: var(--gold-primary); color: var(--bg-color); }
+
+        /* القائمة الجانبية */
+        .side-menu {
+            position: fixed; top: 60px; width: 250px; height: calc(100vh - 60px);
+            background-color: var(--surface-color); transition: 0.4s; z-index: 999; padding-top: 20px;
+            right: -100%; border-left: 1px solid var(--gold-primary);
+        }
+        html[lang="ar"] .side-menu.active { right: 0; }
+        html[lang="en"] .side-menu { left: -100%; right: auto; border-right: 1px solid var(--gold-primary); border-left: none; }
+        html[lang="en"] .side-menu.active { left: 0; }
+        .side-menu a {
+            display: block; padding: 15px 20px; color: var(--text-light); text-decoration: none;
+            font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.05); transition: 0.3s;
+        }
+        html[lang="ar"] .side-menu a:hover { color: var(--gold-primary); padding-right: 30px; }
+        html[lang="en"] .side-menu a:hover { color: var(--gold-primary); padding-left: 30px; }
+
+        /* الأقسام العامة */
+        section { padding: 100px 5% 50px; }
+        .section-title { text-align: center; color: var(--gold-primary); font-size: 2.5rem; margin-bottom: 40px; position: relative; }
+        .section-title::after { content: ''; display: block; width: 80px; height: 3px; background: var(--gold-primary); margin: 10px auto; border-radius: 2px; }
+
+        /* الرئيسية */
+        .hero {
+            text-align: center; padding-top: 150px; min-height: 80vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; background: radial-gradient(circle at center, #2a2a2a 0%, #0d0d0d 100%);
+        }
+        .hero h1 {
+            color: var(--gold-primary); font-size: clamp(1.8rem, 4vw, 2.5rem); max-width: 900px;
+            line-height: 1.4; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3); padding: 0 10px;
+        }
+        .hero p { max-width: 800px; font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 30px; padding: 0 15px; }
+
+        /* من نحن والخدمات والمزايا */
+        .about-text {
+            background-color: var(--surface-color); padding: 40px; border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2); text-align: center; font-size: 1.1rem; line-height: 1.9;
+        }
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .service-card {
+            background-color: var(--surface-color); border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 15px; padding: 30px 20px; text-align: center; transition: 0.3s; cursor: pointer;
+        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.15); border-color: var(--gold-primary); }
+        .service-card i { font-size: 3rem; color: var(--gold-primary); margin-bottom: 20px; }
+        .service-card h3 { color: var(--gold-light); margin-bottom: 15px; font-size: 1.4rem; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; }
+
+        .feature-card { text-align: center; padding: 20px; }
+        .feature-card i { font-size: 2.5rem; color: var(--gold-primary); margin-bottom: 15px; background: rgba(212, 175, 55, 0.1); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; }
+        .feature-card h3 { margin-bottom: 10px; color: var(--text-light); }
+        .feature-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* تواصل معنا والخريطة المضمنة من جوجل */
+        .contact-info { text-align: center; margin-bottom: 40px; padding: 0 10px; }
+        .contact-info p { font-size: 0.95rem; margin-bottom: 10px; word-wrap: break-word; }
+        html[lang="ar"] .contact-info i { margin-left: 10px; color: var(--gold-primary); }
+        html[lang="en"] .contact-info i { margin-right: 10px; color: var(--gold-primary); }
+        
+        .map-container { position: relative; width: 100%; padding-bottom: 75%; height: 0; overflow: hidden; border-radius: 15px; border: 2px solid var(--gold-primary); }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: contrast(1.1) opacity(0.9); }
+        
+        /* رسالة الخدمة الميدانية فوق الخريطة */
+        .service-area-message {
+            background: rgba(13, 13, 13, 0.85);
+            color: var(--gold-primary);
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid var(--gold-primary);
+            line-height: 1.8;
+        }
+
+        /* ================= البار السفلي ================= */
+        .bottom-nav {
+            position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%);
+            background-color: rgba(26, 26, 26, 0.95); border: 1px solid var(--gold-primary);
+            border-radius: 35px; display: flex; justify-content: space-around; align-items: center;
+            padding: 5px 10px; width: 90%; max-width: 450px; z-index: 1000; backdrop-filter: blur(10px);
+        }
+        .bottom-nav a {
+            color: var(--gold-primary); text-decoration: none; font-size: 1.1rem;
+            padding: 5px; border-radius: 12px; transition: 0.3s;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; flex: 1; text-align: center;
+        }
+        .bottom-nav a:hover, .bottom-nav a:active {
+            background-color: var(--gold-primary); color: var(--bg-color); transform: translateY(-3px);
+        }
+        .nav-text { font-size: 0.65rem; font-weight: 700; }
+
+        /* ================= الأزرار العائمة ================= */
+        .floating-action-menu {
+            position: fixed;
+            bottom: 95px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+        }
+        html[lang="ar"] .floating-action-menu { left: 15px; }
+        html[lang="en"] .floating-action-menu { right: 15px; }
+
+        .float-btn {
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 1.3rem;
+            text-decoration: none; color: white;
+            border: 2px solid white; transition: transform 0.3s;
+        }
+        .float-btn:hover { transform: scale(1.1); }
+        
+        .call-btn { background-color: var(--gold-primary); animation: pulseCall 2s infinite; animation-delay: 1s; }
+        .wa-btn { background-color: #25d366; animation: pulseWA 2s infinite; }
+
+        @keyframes pulseWA { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        @keyframes pulseCall { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+
+        /* التذييل */
+        footer { text-align: center; padding: 40px 15px 100px; background-color: #080808; border-top: 1px solid rgba(212, 175, 55, 0.2); }
+        .copyright { color: var(--text-muted); font-size: 0.75rem; margin-bottom: 15px; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; }
+        .designer-badge, .designer-badge-loader { display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid var(--silver); padding: 6px 15px; border-radius: 30px; text-decoration: none; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); transition: 0.3s; text-align: center; max-width: 100%; }
+        .designer-badge span, .designer-badge-loader span { color: var(--silver); font-weight: bold; font-size: 0.7rem; text-shadow: 0 0 5px rgba(192, 192, 192, 0.5); white-space: normal; }
+        .designer-badge:hover { background: var(--silver); transform: scale(1.05); }
+        .designer-badge:hover span { color: #000; text-shadow: none; }
+
+        /* ================= التجاوب للشاشات الصغيرة ================= */
+        @media (max-width: 768px) {
+            section { padding: 80px 5% 40px; }
+            .section-title { font-size: 1.8rem; margin-bottom: 30px; }
+            .hero { padding-top: 100px; min-height: 70vh; }
+            .hero h1 { font-size: 1.5rem; }
+            .hero p { font-size: 0.95rem; }
+            .about-text { padding: 25px 15px; font-size: 1rem; line-height: 1.7; }
+            .grid-container { grid-template-columns: 1fr; gap: 20px; }
+            .service-card { padding: 25px 15px; }
+            .bottom-nav { width: 95%; bottom: 10px; }
+            .floating-action-menu { bottom: 85px; }
+            .float-btn { width: 40px; height: 40px; font-size: 1.2rem; }
+            header .site-title { font-size: 0.95rem; }
+        }
+    </style>
+</head>
+<body class="no-scroll">
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-image-frame">
+                <img src="https://imgg.io/images/2026/03/11/c03c7dddb82037ba4d705a481f63533d.png" alt="Logo">
+            </div>
+            <p class="loading-text">
+                <span class="ar">جاري تجهيز الموقع</span><span class="en">Loading Website</span><span class="dots"></span>
+            </p>
+        </div>
+        <div class="loader-footer">
+            <div class="designer-badge-loader">
+                <span class="ar">👑 تم التصميم بواسطة المهندس إسلام الشيخ 👑</span>
+                <span class="en">👑 Designed by Eng. Islam Elsheikh 👑</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-right">
+            <button class="menu-btn" onclick="toggleMenu()" aria-label="Menu"><i class="fas fa-bars"></i></button>
+            <div class="site-title">
+                <span class="ar">إبراهيم يحيى فني سيراميك</span>
+                <span class="en">Ibrahim Yahya Tiling</span>
+            </div>
+        </div>
+        <button id="langToggleBtn" class="lang-btn">EN</button>
+    </header>
+
+    <div class="side-menu" id="sideMenu">
+        <a href="#hero" onclick="toggleMenu()"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+        <a href="#about" onclick="toggleMenu()"><span class="ar">من نحن</span><span class="en">About Us</span></a>
+        <a href="#services" onclick="toggleMenu()"><span class="ar">خدماتنا</span><span class="en">Services</span></a>
+        <a href="#why-us" onclick="toggleMenu()"><span class="ar">لماذا نحن</span><span class="en">Why Us</span></a>
+        <a href="#contact" onclick="toggleMenu()"><span class="ar">تواصل معنا</span><span class="en">Contact</span></a>
+    </div>
+
+    <section id="hero" class="hero">
+        <h1>
+            <span class="ar">إبراهيم يحيى فني سيراميك وبورسلان ورخام بالرياض</span>
+            <span class="en">Ibrahim Yahya Ceramic & Marble Tech in Riyadh</span>
+        </h1>
+        <p>
+            <span class="ar">نقدم خدمات تركيب السيراميك والبورسلان والرخام بأعلى معايير الجودة. نحن "خدمة ميدانية" مقرنا حي المصيف ونصل إليك في جميع أحياء شمال الرياض لتقديم تشطيبات فخمة وأسعار تنافسية. تواصل معنا الآن.</span>
+            <span class="en">We provide top-quality ceramic, porcelain, and marble installation. As a field service based in Al Masif, we reach you anywhere in North Riyadh for luxurious finishes. Contact us now.</span>
+        </p>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title"><span class="ar">من نحن</span><span class="en">About Us</span></h2>
+        <div class="about-text">
+            <span class="ar"><strong>إبراهيم يحيى فني سيراميك وبورسلان ورخام،</strong> خبيرك الأول في عالم التشطيبات الراقية بحي المصيف والرياض. نمتلك سنوات من الخبرة الواسعة في تقديم حلول تبليط متكاملة تلبي كافة تطلعات عملائنا الكرام. نجمع بين المهارة الحرفية العالية والفهم العميق لأحدث اتجاهات التصميم، لنقدم لك نتائج مبهرة تتجاوز توقعاتك بجودة لا تضاهى كخدمة ميدانية احترافية.</span>
+            <span class="en"><strong>Ibrahim Yahya Ceramic Tech,</strong> your top expert in Al Masif and Riyadh. We have years of experience providing comprehensive tiling solutions. We combine high craftsmanship with deep understanding of design trends to deliver stunning results as a professional field service.</span>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title"><span class="ar">خدماتنا</span><span class="en">Our Services</span></h2>
+        <div class="grid-container">
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-border-all"></i>
+                <h3><span class="ar">تركيب بلاط وسيراميك</span><span class="en">Tile Installation</span></h3>
+                <p><span class="ar">نقدم خدمات تركيب البلاط بأنواعه المختلفة للمساحات السكنية. نضمن لك استواءً تاماً وفواصل دقيقة بفضل استخدام أحدث معدات القياس بالليزر.</span><span class="en">We provide tile installation for residential spaces, ensuring perfect leveling and precise joints using advanced laser measurement tools.</span></p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-th-large"></i>
+                <h3><span class="ar">تركيب بورسلان</span><span class="en">Porcelain Installation</span></h3>
+                <p><span class="ar">البورسلان يعكس الفخامة، ونحن نمتلك الحرفية اللازمة للتعامل مع ألواح البورسلان الكبيرة والصغيرة باحترافية، ونستخدم أفضل مواد التثبيت.</span><span class="en">Porcelain reflects absolute luxury. We have the craftsmanship to handle large format porcelain slabs professionally using the best adhesives.</span></p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-gem"></i>
+                <h3><span class="ar">تركيب رخام وجرانيت</span><span class="en">Marble Installation</span></h3>
+                <p><span class="ar">نتعامل مع الرخام كقطعة فنية ثمينة، ونضمن لك تطابق العروق لإخراج تحفة بصرية لا مثيل لها للأرضيات والواجهات.</span><span class="en">We treat marble as precious art, ensuring perfectly matched veins for unparalleled visual masterpieces for floors and facades.</span></p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-bath"></i>
+                <h3><span class="ar">ترميم وتعديل حمامات</span><span class="en">Bathroom Renovation</span></h3>
+                <p><span class="ar">نجدد حمامك بالكامل من إزالة البلاط القديم ومعالجة التسربات إلى تركيب أحدث تشكيلات السيراميك والمودرن.</span><span class="en">We fully renovate your bathroom from removing old tiles and fixing leaks to installing the latest modern ceramic designs.</span></p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-home"></i>
+                <h3><span class="ar">تركيب بلاط أسطح</span><span class="en">Roof Tiling</span></h3>
+                <p><span class="ar">نولي اهتماماً بتبليط الأسطح مع ضبط الميول الهندسية الدقيقة نحو مصارف المياه لضمان عدم تجمعها نهائياً.</span><span class="en">We focus on roof tiling with precise geometric slopes towards drains ensuring no water accumulation.</span></p>
+            </div>
+            <div class="service-card" onclick="this.classList.toggle('active')">
+                <i class="fas fa-leaf"></i>
+                <h3><span class="ar">تبليط الأحواش والممرات</span><span class="en">Courtyard Tiling</span></h3>
+                <p><span class="ar">ننفذ أرضيات الأحواش باستخدام البورسلان الخارجي المقاوم للانزلاق أو الانترلوك، لنضفي لمسات جمالية على مساحتك.</span><span class="en">We execute outdoor floors using slip-resistant outdoor porcelain or interlock, adding aesthetic touches to your spaces.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" style="background-color: #111;">
+        <h2 class="section-title"><span class="ar">لماذا تختار إبراهيم يحيى؟</span><span class="en">Why Choose Ibrahim Yahya?</span></h2>
+        <div class="grid-container">
+            <div class="feature-card">
+                <i class="fas fa-medal"></i>
+                <h3><span class="ar">دقة وجودة في التنفيذ</span><span class="en">Precision & Quality</span></h3>
+                <p><span class="ar">نعتمد على أدوات قياس متطورة وخبرة واسعة لنضمن لك تشطيبات خالية من العيوب.</span><span class="en">We rely on advanced measuring tools to ensure flawless finishes.</span></p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-truck"></i>
+                <h3><span class="ar">خدمة ميدانية سريعة</span><span class="en">Fast Field Service</span></h3>
+                <p><span class="ar">ننطلق من حي المصيف لنصلك في موقعك بسرعة وفي الموعد المتفق عليه تماماً.</span><span class="en">We dispatch from Al Masif to reach your location promptly on schedule.</span></p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-tags"></i>
+                <h3><span class="ar">أسعار تنافسية</span><span class="en">Competitive Prices</span></h3>
+                <p><span class="ar">معادلة ذهبية تجمع بين أعلى معايير الجودة والأسعار المدروسة التي تناسب ميزانيتك.</span><span class="en">A golden equation combining top quality standards with affordable pricing.</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title"><span class="ar">تواصل معنا</span><span class="en">Contact Us</span></h2>
+        <div class="contact-info">
+            <p><i class="fas fa-phone"></i> <span class="ar">رقم الجوال: </span><span class="en">Phone: </span><a href="tel:0576889063" style="color:var(--text-light); text-decoration:none; direction:ltr; display:inline-block;">0576889063</a></p>
+            <p><i class="fas fa-envelope"></i> <span class="ar">البريد الإلكتروني: </span><span class="en">Email: </span><a href="mailto:admin@aboyehiaalmoblt.com" style="color:var(--text-light); text-decoration:none;">admin@aboyehiaalmoblt.com</a></p>
+        </div>
+        
+        <div class="service-area-message">
+            <i class="fas fa-map-marked-alt" style="margin-left: 5px; color: var(--gold-primary); font-size: 1.5rem;"></i><br>
+            <span class="ar">نحن خدمة ميدانية بالكامل. نتواجد في <strong>حي المصيف</strong> ونصل بمعداتنا إليك في كافة أنحاء الرياض لتنفيذ أعمال السيراميك والرخام في موقعك مباشرةً، مما يضمن لك راحة البال وسرعة التنفيذ.</span>
+            <span class="en">We are a fully field-based service. Located in <strong>Al Masif</strong>, we bring our equipment directly to your site across Riyadh, ensuring peace of mind and swift execution.</span>
+        </div>
+
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=%D8%AD%D9%8A+%D8%A7%D9%84%D9%85%D8%B5%D9%8A%D9%81+%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6&t=&z=14&ie=UTF8&iwloc=&output=embed" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <div class="floating-action-menu">
+        <a href="tel:0576889063" class="float-btn call-btn" aria-label="Call">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <a href="https://wa.me/966576889063" class="float-btn wa-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="#hero">
+            <i class="fas fa-home"></i>
+            <span class="nav-text"><span class="ar">الرئيسية</span><span class="en">Home</span></span>
+        </a>
+        <a href="#services">
+            <i class="fas fa-tools"></i>
+            <span class="nav-text"><span class="ar">خدماتنا</span><span class="en">Services</span></span>
+        </a>
+        <a href="#why-us">
+            <i class="fas fa-star"></i>
+            <span class="nav-text"><span class="ar">لماذا نحن</span><span class="en">Why Us</span></span>
+        </a>
+        <a href="#contact">
+            <i class="fas fa-phone-alt"></i>
+            <span class="nav-text"><span class="ar">تواصل</span><span class="en">Contact</span></span>
+        </a>
+    </nav>
+
+    <footer>
+        <div class="copyright">
+            <i class="fas fa-copyright"></i>
+            <span class="ar">جميع الحقوق محفوظة لدى : إبراهيم يحيى فني سيراميك وبورسلان ورخام 2026</span>
+            <span class="en">All rights reserved to Ibrahim Yahya Ceramic Tech 2026</span>
+        </div>
+        
+        <a href="https://wa.me/966547194788" target="_blank" class="designer-badge" rel="noopener noreferrer">
+            <span class="ar">👑 تم التصميم بواسطة المهندس إسلام الشيخ 👑</span>
+            <span class="en">👑 Designed by Eng. Islam Elsheikh 👑</span>
+        </a>
+    </footer>
+
+    <script>
+        // إعدادات شاشة التحميل
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loader');
+                loader.classList.add('hidden');
+                document.body.classList.remove('no-scroll');
+                setTimeout(() => { loader.style.display = 'none'; }, 500);
+            }, 2000);
+        });
+
+        // القائمة الجانبية
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+
+        // نظام اللغتين التلقائي واليدوي
+        const langBtn = document.getElementById('langToggleBtn');
+        let currentLang = 'ar';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            langBtn.innerText = lang === 'ar' ? 'EN' : 'AR';
+            localStorage.setItem('siteLang', lang);
+            document.getElementById('sideMenu').classList.remove('active');
+        }
+
+        langBtn.addEventListener('click', () => {
+            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLang');
+            if (savedLang) {
+                setLanguage(savedLang);
+            } else {
+                const browserLang = navigator.language || navigator.userLanguage;
+                setLanguage(browserLang.toLowerCase().startsWith('ar') ? 'ar' : 'en');
+            }
+        });
+    </script>
+</body>
+</html>
